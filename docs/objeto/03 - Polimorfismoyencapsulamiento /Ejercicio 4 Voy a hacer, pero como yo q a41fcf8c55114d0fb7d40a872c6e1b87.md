@@ -1,0 +1,40 @@
+# Ejercicio 4: Voy a hacer, pero como yo q
+
+Created: July 3, 2022 5:59 PM
+
+```ruby
+module Pepita
+  @energia = 1000
+
+  def self.energia
+    @energia
+  end
+
+  def self.volar_en_circulos!
+    @energia -= 10
+  end
+
+  def self.comer_alpiste!(gramos)
+    @energia += gramos * 15
+  end
+
+  def self.debil?
+    @energia < 100
+  end
+
+  def self.feliz?
+    @energia > 1000
+  end
+
+  def self.hacer_lo_que_quiera!
+    if self.debil?
+      self.comer_alpiste!(10)
+      else if self.feliz?
+        5.times { volar_en_circulos! }
+      else
+        3.times { volar_en_circulos! }
+      end
+    end
+  end
+end
+```
